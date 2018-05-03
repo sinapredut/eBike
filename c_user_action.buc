@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1522734528697" org.eventb.texttools.text_representation="context c_user_action&#10;&#10;sets USER_ACTION&#10;&#10;constants pa pac cc pc pcc br ccc&#10;&#10;axioms&#10;  @axm1 partition(USER_ACTION, {pa}, {pac}, {cc}, {pc}, {pcc}, {br}, {ccc})&#10;end&#10;" version="3">
+<org.eventb.core.carrierSet name="_rjdrkDcCEeiHh-RJhgr6eg" org.eventb.core.identifier="USER_ACTION"/>
+<org.eventb.core.constant name="_rjdrkTcCEeiHh-RJhgr6eg" org.eventb.core.identifier="pa"/>
+<org.eventb.core.constant name="_rjdrkjcCEeiHh-RJhgr6eg" org.eventb.core.identifier="pac"/>
+<org.eventb.core.constant name="_rjdrkzcCEeiHh-RJhgr6eg" org.eventb.core.identifier="cc"/>
+<org.eventb.core.constant name="_rjdrlDcCEeiHh-RJhgr6eg" org.eventb.core.identifier="pc"/>
+<org.eventb.core.constant name="_rjdrlTcCEeiHh-RJhgr6eg" org.eventb.core.identifier="pcc"/>
+<org.eventb.core.constant name="_rjdrljcCEeiHh-RJhgr6eg" org.eventb.core.identifier="br"/>
+<org.eventb.core.constant name="_rjdrlzcCEeiHh-RJhgr6eg" org.eventb.core.identifier="ccc"/>
+<org.eventb.core.axiom name="_rjm1gDcCEeiHh-RJhgr6eg" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(USER_ACTION, {pa}, {pac}, {cc}, {pc}, {pcc}, {br}, {ccc})"/>
+</org.eventb.core.contextFile>

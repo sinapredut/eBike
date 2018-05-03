@@ -1,0 +1,2225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="STATUS,USER_ACTION" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p20,p21,p22,p23,p5,p27,p29,p6,p7,p8,p9,p30,p33,p11,p13,p14,p38,p39,p40,p4,p24,p25,p26,p28,p10,p31,p32,p34,p35,p12,p36,p37,p15,p16,p3,p17,p18,p19,p41">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="useraction'" org.eventb.core.type="ℙ(STATUS×USER_ACTION)"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬pac=cc"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬cc=pcc"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬cc=br"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬pa=ccc"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬pcc=ccc"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pac=pc"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬PA=UNDEFINED"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬CC=PC"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬CC=BRAKE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬PA=PC"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pac=br"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬pa=pac"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬PC=UNDEFINED"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬PO=PA"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬PA=CC"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬pc=ccc"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬pac=pcc"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬br=ccc"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬PO=BRAKE"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬pa=cc"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬pcc=br"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pa=pc"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬PO=UNDEFINED"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pa=pcc"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬pc=br"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="useraction'∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬pa=br"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬cc=pc"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬UNDEFINED=BRAKE"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬pac=ccc"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬cc=ccc"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬PO=PC"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬CC=UNDEFINED"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="useraction'∈{{PO ↦ pc},{PO ↦ pa},{PO ↦ cc}}"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬PO=CC"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬PA=BRAKE"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬PC=BRAKE"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬pc=pcc"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act4/FIS" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="STATUS,USER_ACTION">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p41">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p41" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬pac=cc">
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬cc=pcc">
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬cc=br">
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬pa=ccc">
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬pcc=ccc">
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬pac=pc">
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬PA=UNDEFINED">
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CC=PC">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="{{PO ↦ pc},{PO ↦ pa},{PO ↦ cc}}≠(∅ ⦂ ℙ(ℙ(STATUS×USER_ACTION)))"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬CC=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬PA=PC">
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pac=br">
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})">
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬pa=pac">
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬PC=UNDEFINED">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬PO=PA">
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬PA=CC">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬pc=ccc">
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pac=pcc">
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬br=ccc">
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬PO=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}">
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬pa=cc"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬pcc=br">
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬pa=pc"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬PO=UNDEFINED">
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬pa=pcc">
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬pc=br">
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬pa=br">
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬cc=pc"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬UNDEFINED=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pac=ccc">
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬cc=ccc">
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬PO=PC">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬CC=UNDEFINED">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬PO=CC">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬PA=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬PC=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬pc=pcc">
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="PedalAssist/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5" org.eventb.core.prSets="STATUS,USER_ACTION" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p44"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p45"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p22,p23,p24,p25,p7,p29,p31,p8,p9,p10,p11,p32,p35,p13,p15,p16,p4,p40,p5,p41,p42,p6,p26,p27,p28,p30,p12,p33,p34,p36,p37,p14,p38,p39,p17,p18,p19,p20,p21,p43">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="beforecc" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="useraction" org.eventb.core.type="ℙ(STATUS×USER_ACTION)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="beforecc⊆{PO,PA,UNDEFINED}"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬pac=cc"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬cc=pcc"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬cc=br"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬pa=ccc"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pcc=ccc"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pac=pc"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬PA=UNDEFINED"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬CC=PC"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬CC=BRAKE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬PA=PC"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬pac=br"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬pa=pac"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬PC=UNDEFINED"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬PO=PA"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬PA=CC"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="status={PO}∨(status={CC}∧beforecc={PA})"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬pc=ccc"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="useraction∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬pac=pcc"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬br=ccc"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬PO=BRAKE"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬pa=cc"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pcc=br"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pa=pc"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="{PO ↦ pa,CC ↦ ccc}∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬PO=UNDEFINED"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬pa=pcc"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬pc=br"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬pa=br"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="status⊆STATUS"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬cc=pc"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬UNDEFINED=BRAKE"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬pac=ccc"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬cc=ccc"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬PO=PC"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬CC=UNDEFINED"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬PO=CC"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬PA=BRAKE"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬PC=BRAKE"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬pc=pcc"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="engrun∈BOOL">
+<org.eventb.core.prIdent name="engrun" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="PedalOnly/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5" org.eventb.core.prSets="STATUS,USER_ACTION" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p44"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p45"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p22,p23,p24,p25,p7,p29,p31,p8,p9,p10,p11,p32,p35,p13,p15,p16,p40,p5,p41,p42,p6,p26,p27,p28,p30,p4,p12,p33,p34,p36,p37,p14,p38,p39,p17,p18,p19,p20,p21,p43">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="beforecc" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="useraction" org.eventb.core.type="ℙ(STATUS×USER_ACTION)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="beforecc⊆{PO,PA,UNDEFINED}"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬pac=cc"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬cc=pcc"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬cc=br"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬pa=ccc"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pcc=ccc"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pac=pc"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬PA=UNDEFINED"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬CC=PC"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="{PA ↦ pac,CC ↦ ccc,PC ↦ pcc}∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬CC=BRAKE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬PA=PC"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬pac=br"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬pa=pac"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬PC=UNDEFINED"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬PO=PA"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬PA=CC"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬pc=ccc"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="useraction∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬pac=pcc"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬br=ccc"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬PO=BRAKE"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬pa=cc"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pcc=br"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pa=pc"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="status={PA}∨status={PC}∨(status={CC}∧beforecc={PO})"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬PO=UNDEFINED"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬pa=pcc"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬pc=br"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬pa=br"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="status⊆STATUS"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬cc=pc"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬UNDEFINED=BRAKE"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬pac=ccc"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬cc=ccc"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬PO=PC"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬CC=UNDEFINED"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬PO=CC"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬PA=BRAKE"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬PC=BRAKE"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬pc=pcc"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="engrun∈BOOL">
+<org.eventb.core.prIdent name="engrun" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="PedalOnly2CruiseControl/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="STATUS,USER_ACTION" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p45"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p46"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p47"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with s=PO" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p48">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p48" org.eventb.core.prHyps="p1,p23,p24,p25,p26,p8,p30,p32,p9,p10,p45,p11,p12,p33,p36,p14,p16,p17,p41,p6,p42,p43,p7,p27,p28,p29,p31,p5,p13,p34,p35,p37,p38,p15,p39,p40,p18,p19,p20,p21,p22,p44">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="beforecc" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="s" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="useraction" org.eventb.core.type="ℙ(STATUS×USER_ACTION)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="beforecc⊆{PO,PA,UNDEFINED}"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬pac=cc"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬pa=ccc"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬pac=pc"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬PA=UNDEFINED"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="status={PO}"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬CC=BRAKE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬PA=PC"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬pac=br"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬PC=UNDEFINED"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬PA=CC"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬pc=ccc"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="useraction∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬pac=pcc"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬PO=BRAKE"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pa=pc"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="useraction{s ↦ cc}∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="useraction{PO ↦ cc}∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="status⊆STATUS"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬UNDEFINED=BRAKE"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬cc=ccc"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬PO=CC"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬PA=BRAKE"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬PC=BRAKE"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬cc=pcc"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬cc=br"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pcc=ccc"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬CC=PC"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬pa=pac"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬PO=PA"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="status∈{{PO}}"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬br=ccc"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pa=cc"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pcc=br"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="s=PO"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬PO=UNDEFINED"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬pa=pcc"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬pc=br"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬pa=br"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬cc=pc"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬pac=ccc"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬PO=PC"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬CC=UNDEFINED"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="¬pc=pcc"/>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="engrun∈BOOL">
+<org.eventb.core.prIdent name="engrun" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="PedalOnly2CruiseControl/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="STATUS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p0"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬pac=cc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬cc=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬cc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬pa=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬pcc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pac=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬PA=UNDEFINED">
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬CC=PC">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="status={PO}"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬CC=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬PA=PC">
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pac=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬pa=pac">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬PC=UNDEFINED">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬PO=PA">
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="status∈{{PO}}"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬PA=CC">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬pc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pac=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬br=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬PO=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬pa=cc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬pcc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬pa=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬PO=UNDEFINED">
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬pa=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬pc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬pa=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬cc=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬UNDEFINED=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pac=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬cc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬PO=PC">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬CC=UNDEFINED">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬PO=CC">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬PA=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬PC=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬pc=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="PedalAssist2CruiseControl/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="STATUS,USER_ACTION" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p45"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p46"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p47"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with s=PA" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p48">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p48" org.eventb.core.prHyps="p1,p23,p24,p25,p26,p8,p30,p32,p9,p10,p11,p12,p33,p36,p14,p16,p17,p41,p6,p42,p43,p7,p27,p28,p29,p31,p13,p34,p35,p37,p38,p15,p5,p39,p40,p18,p19,p20,p21,p22,p45,p44">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="beforecc" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="s" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="useraction" org.eventb.core.type="ℙ(STATUS×USER_ACTION)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="beforecc⊆{PO,PA,UNDEFINED}"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬pac=cc"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬pa=ccc"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬pac=pc"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬PA=UNDEFINED"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬CC=BRAKE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬PA=PC"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬pac=br"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬PC=UNDEFINED"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬PA=CC"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬pc=ccc"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="useraction∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬pac=pcc"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬PO=BRAKE"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pa=pc"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="useraction{s ↦ cc}∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="status⊆STATUS"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬UNDEFINED=BRAKE"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="s=PA"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬cc=ccc"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬PO=CC"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬PA=BRAKE"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬PC=BRAKE"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬cc=pcc"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="status∈{{PA}}"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬cc=br"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pcc=ccc"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬CC=PC"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬pa=pac"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬PO=PA"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬br=ccc"/>
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="useraction{PA ↦ cc}∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pa=cc"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pcc=br"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬PO=UNDEFINED"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬pa=pcc"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬pc=br"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬pa=br"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬cc=pc"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬pac=ccc"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬PO=PC"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬CC=UNDEFINED"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="status={PA}"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="¬pc=pcc"/>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="engrun∈BOOL">
+<org.eventb.core.prIdent name="engrun" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="PedalAssist2CruiseControl/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="STATUS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p0"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬pac=cc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬cc=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="status∈{{PA}}"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬cc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬pa=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬pcc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pac=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬PA=UNDEFINED">
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬CC=PC">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬CC=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬PA=PC">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pac=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬pa=pac">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬PC=UNDEFINED">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬PO=PA">
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬PA=CC">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬pc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pac=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬br=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬PO=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬pa=cc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬pcc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬pa=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬PO=UNDEFINED">
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬pa=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬pc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬pa=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬cc=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬UNDEFINED=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pac=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬cc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬PO=PC">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬CC=UNDEFINED">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="status={PA}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬PO=CC">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬PA=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬PC=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬pc=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="PedalCharge/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="STATUS,USER_ACTION" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p45"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p46"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p47"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with s=PO" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p48">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p48" org.eventb.core.prHyps="p1,p23,p24,p25,p26,p8,p30,p32,p9,p10,p45,p11,p12,p33,p36,p14,p16,p17,p41,p6,p42,p43,p7,p27,p28,p29,p31,p5,p13,p34,p35,p37,p38,p15,p39,p40,p18,p19,p20,p21,p22,p44">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="beforecc" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="s" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="useraction" org.eventb.core.type="ℙ(STATUS×USER_ACTION)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="beforecc⊆{PO,PA,UNDEFINED}"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬pac=cc"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬pa=ccc"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬pac=pc"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬PA=UNDEFINED"/>
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="useraction{PO ↦ pc}∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="status={PO}"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬CC=BRAKE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬PA=PC"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬pac=br"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬PC=UNDEFINED"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬PA=CC"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬pc=ccc"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="useraction∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬pac=pcc"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬PO=BRAKE"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pa=pc"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="useraction{s ↦ pc}∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="status⊆STATUS"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬UNDEFINED=BRAKE"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬cc=ccc"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬PO=CC"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬PA=BRAKE"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬PC=BRAKE"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬cc=pcc"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬cc=br"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pcc=ccc"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬CC=PC"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬pa=pac"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬PO=PA"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="status∈{{PO}}"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬br=ccc"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pa=cc"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pcc=br"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="s=PO"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬PO=UNDEFINED"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬pa=pcc"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬pc=br"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬pa=br"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬cc=pc"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬pac=ccc"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬PO=PC"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬CC=UNDEFINED"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="¬pc=pcc"/>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="engrun∈BOOL">
+<org.eventb.core.prIdent name="engrun" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="PedalCharge/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="STATUS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p0"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬pac=cc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬cc=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬cc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬pa=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬pcc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pac=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬PA=UNDEFINED">
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬CC=PC">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="status={PO}"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬CC=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬PA=PC">
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pac=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬pa=pac">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬PC=UNDEFINED">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬PO=PA">
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="status∈{{PO}}"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬PA=CC">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬pc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pac=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬br=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬PO=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬pa=cc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬pcc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬pa=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬PO=UNDEFINED">
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬pa=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬pc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬pa=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬cc=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬UNDEFINED=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pac=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬cc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬PO=PC">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬CC=UNDEFINED">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬PO=CC">
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬PA=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬PC=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬pc=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Brake/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="STATUS,USER_ACTION" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p45"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p46"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p23,p24,p25,p26,p8,p30,p32,p9,p10,p11,p12,p33,p36,p14,p16,p17,p41,p5,p42,p43,p7,p27,p28,p29,p31,p13,p34,p35,p37,p38,p15,p39,p40,p18,p19,p20,p21,p22,p44,p6">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="beforecc" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="s" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="useraction" org.eventb.core.type="ℙ(STATUS×USER_ACTION)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="beforecc⊆{PO,PA,UNDEFINED}"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="status={PO}∨status={PA}∨status={PC}"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬pac=cc"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬cc=pcc"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬cc=br"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬pa=ccc"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pcc=ccc"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬pac=pc"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬PA=UNDEFINED"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬CC=PC"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬CC=BRAKE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬PA=PC"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬pac=br"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬pa=pac"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬PC=UNDEFINED"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬PO=PA"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬PA=CC"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬pc=ccc"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="useraction∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬pac=pcc"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬br=ccc"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="useraction{s ↦ br}∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬PO=BRAKE"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pa=cc"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pcc=br"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pa=pc"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬PO=UNDEFINED"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬pa=pcc"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬pc=br"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬pa=br"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="status⊆STATUS"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬cc=pc"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬UNDEFINED=BRAKE"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬pac=ccc"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬cc=ccc"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬PO=PC"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬CC=UNDEFINED"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬PO=CC"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬PA=BRAKE"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬PC=BRAKE"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="¬pc=pcc"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="engrun∈BOOL">
+<org.eventb.core.prIdent name="engrun" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="s∈STATUS ∖ {CC,BRAKE,UNDEFINED}"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="BrakeCruiseControl2PedalOnly/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="STATUS,USER_ACTION" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p45,p46"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p47"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p48"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p49"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with s=CC" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p45">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p50">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p50" org.eventb.core.prHyps="p1,p23,p24,p25,p26,p8,p30,p32,p9,p10,p46,p11,p12,p33,p36,p14,p16,p17,p41,p47,p6,p42,p43,p7,p27,p28,p29,p31,p45,p13,p34,p35,p37,p38,p15,p39,p40,p18,p19,p20,p21,p22,p44">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="beforecc" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="s" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="useraction" org.eventb.core.type="ℙ(STATUS×USER_ACTION)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="beforecc⊆{PO,PA,UNDEFINED}"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬pac=cc"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬pa=ccc"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬pac=pc"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬PA=UNDEFINED"/>
+<org.eventb.core.prPred name="p50" org.eventb.core.predicate="useraction{CC ↦ br}∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬CC=BRAKE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬PA=PC"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬pac=br"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬PC=UNDEFINED"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬PA=CC"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬pc=ccc"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="useraction∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬pac=pcc"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="useraction{s ↦ br}∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬PO=BRAKE"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pa=pc"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="s=CC∧beforecc={PO}"/>
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="status⊆STATUS"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬UNDEFINED=BRAKE"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬cc=ccc"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬PO=CC"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬PA=BRAKE"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬PC=BRAKE"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬cc=pcc"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬cc=br"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pcc=ccc"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬CC=PC"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="beforecc={PO}"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬pa=pac"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬PO=PA"/>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="status={CC}"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬br=ccc"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pa=cc"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pcc=br"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="s=CC"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="status∈{{CC}}"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬PO=UNDEFINED"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬pa=pcc"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬pc=br"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬pa=br"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬cc=pc"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬pac=ccc"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬PO=PC"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬CC=UNDEFINED"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="¬pc=pcc"/>
+<org.eventb.core.prPred name="p49" org.eventb.core.predicate="engrun∈BOOL">
+<org.eventb.core.prIdent name="engrun" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="BrakeCruiseControl2PedalOnly/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="STATUS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p43,p44"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p45"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p45,p44">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p46">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p46" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p47">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p47" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="beforecc" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="s" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="⊤∧⊤"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pac=cc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬cc=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬cc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬pa=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬pcc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pac=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬PA=UNDEFINED">
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬CC=PC">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="beforecc={PO}"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬CC=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬PA=PC">
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pac=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬pa=pac">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬PC=UNDEFINED">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬PO=PA">
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬PA=CC">
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬pc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="status={CC}"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pac=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬br=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬PO=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬pa=cc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬pcc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬pa=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="s=CC"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="status∈{{CC}}"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="s=CC∧beforecc={PO}"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬PO=UNDEFINED">
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬pa=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬pc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬pa=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬cc=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬UNDEFINED=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬pac=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬cc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬PO=PC">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="status={CC}∧beforecc={PO}"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬CC=UNDEFINED">
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬PO=CC"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬PA=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬PC=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬pc=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="BrakeCruiseControl2PedalAssist/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="STATUS,USER_ACTION">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p45,p46"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p47"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p48"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p49"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with s=CC" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p45">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p50">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p50" org.eventb.core.prHyps="p1,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="beforecc" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="s" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="useraction" org.eventb.core.type="ℙ(STATUS×USER_ACTION)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="beforecc⊆{PO,PA,UNDEFINED}"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pac=cc"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pa=ccc"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pac=pc"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬PA=UNDEFINED"/>
+<org.eventb.core.prPred name="p50" org.eventb.core.predicate="useraction{CC ↦ br}∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬CC=BRAKE"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬PA=PC"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬pac=br"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬PC=UNDEFINED"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬PA=CC"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬pc=ccc"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="useraction∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬pac=pcc"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="useraction{s ↦ br}∈STATUS ⇸ USER_ACTION"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬PO=BRAKE"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬pa=pc"/>
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="status⊆STATUS"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬UNDEFINED=BRAKE"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬cc=ccc"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬PO=CC"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬PA=BRAKE"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬PC=BRAKE"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬cc=pcc"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬cc=br"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬pcc=ccc"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="s=CC∧beforecc={PA}"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬CC=PC"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬pa=pac"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬PO=PA"/>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="status={CC}"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="¬br=ccc"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬pa=cc"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬pcc=br"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="s=CC"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="status∈{{CC}}"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬PO=UNDEFINED"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬pa=pcc"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬pc=br"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pa=br"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬cc=pc"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬pac=ccc"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="beforecc={PA}"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬PO=PC"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬CC=UNDEFINED"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬pc=pcc"/>
+<org.eventb.core.prPred name="p49" org.eventb.core.predicate="engrun∈BOOL">
+<org.eventb.core.prIdent name="engrun" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="BrakeCruiseControl2PedalAssist/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="STATUS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p43,p44"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p45"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p44,p45">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p46">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p46" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p47">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p47" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="beforecc" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prIdent name="s" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="⊤∧⊤"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬pac=cc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬cc=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬cc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬pa=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="STATUS={PO,PA,CC,PC,UNDEFINED,BRAKE}">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬pcc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="s=CC∧beforecc={PA}"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬pac=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬PA=UNDEFINED">
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬CC=PC">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬CC=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬PA=PC">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬pac=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="status={CC}∧beforecc={PA}"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬pa=pac">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬PC=UNDEFINED">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬PO=PA">
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬PA=CC"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬pc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="status={CC}"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬pac=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬br=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬PO=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="USER_ACTION={pa,pac,cc,pc,pcc,br,ccc}">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬pa=cc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬pcc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬pa=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="s=CC"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="status∈{{CC}}"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬PO=UNDEFINED">
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬pa=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬pc=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬pa=br">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pa" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬cc=pc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬UNDEFINED=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬pac=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pac" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬cc=ccc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="ccc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="beforecc={PA}"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬PO=PC">
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬CC=UNDEFINED">
+<org.eventb.core.prIdent name="UNDEFINED" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬PO=CC">
+<org.eventb.core.prIdent name="PO" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬PA=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬PC=BRAKE">
+<org.eventb.core.prIdent name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="PC" org.eventb.core.type="STATUS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬pc=pcc">
+<org.eventb.core.prIdent name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.prIdent name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.prIdent name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

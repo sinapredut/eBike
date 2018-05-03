@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1522734650760" org.eventb.texttools.text_representation="machine M1 refines M0  sees c_status c_user_action&#10;&#10;variables status beforecc engrun useraction&#10;&#10;invariants&#10;  @inv1 useraction ∈ STATUS ⇸ USER_ACTION&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1 status≔{PO}&#10;      @act2 beforecc≔{UNDEFINED}&#10;      @act3 engrun≔FALSE&#10;      @act4 useraction:∈{{PO↦pc},{PO↦pa},{PO↦cc}}&#10;  end&#10;&#10;  event PedalAssist refines PedalAssist&#10;    where&#10;      @grd1 status={PO}∨&#10;            (status={CC}∧beforecc={PA})&#10;      //status∈ℙ(STATUS)∖{{PA},{PC},{BRAKE},{UNDEFINED}}&#10;    then&#10;      @act1 status≔{PA}&#10;      @act2 engrun≔TRUE&#10;      @act3 useraction≔{PO↦pa,CC↦ccc}&#10;  end&#10;&#10;  event PedalOnly refines PedalOnly&#10;    where&#10;      @grd1 status={PA}∨status={PC}∨&#10;            (status={CC}∧beforecc={PO})&#10;            //status∈ℙ(STATUS)∖{{PO},{BRAKE},{UNDEFINED}}&#10;    then&#10;      @act1 status≔{PO}&#10;      @act2 engrun≔FALSE&#10;      @act3 useraction≔{PA↦pac,CC↦ccc,PC↦pcc}&#10;  end&#10;&#10;  event PedalOnly2CruiseControl refines PedalOnly2CruiseControl&#10;    any s&#10;    where&#10;      @grd1 s=PO&#10;      @grd2 status∈{{PO}}&#10;    then&#10;      @act1 status≔{CC}&#10;      @act2 beforecc≔{PO}&#10;      @act3 engrun≔TRUE&#10;      @act4 useraction(s)≔cc&#10;  end&#10;&#10;  event PedalAssist2CruiseControl refines PedalAssist2CruiseControl&#10;    any s&#10;    where&#10;      @grd1 s=PA&#10;      @grd2 status∈{{PA}}&#10;    then&#10;      @act1 status≔{CC}&#10;      @act2 beforecc≔{PA}&#10;      @act3 engrun≔TRUE&#10;      @act4 useraction(s)≔cc&#10;  end&#10;&#10;  event PedalCharge refines PedalCharge&#10;    any s&#10;    where&#10;      @grd1 s=PO&#10;      @grd2 status∈{{PO}}&#10;    then&#10;      @act1 status≔{PC}&#10;      @act2 engrun≔TRUE&#10;      @act3 useraction(s)≔pc&#10;  end&#10;&#10;  event Brake refines Brake&#10;    any s&#10;    where&#10;      @grd1 s∈STATUS ∖ {CC, BRAKE, UNDEFINED}&#10;      @grd2 status={PO}∨status={PA}∨status={PC}&#10;      //status∈ℙ(STATUS)∖{{CC},{BRAKE},{UNDEFINED}}&#10;    then&#10;      @act1 status≔{BRAKE}&#10;      @act2 engrun≔FALSE&#10;      @act3 useraction(s)≔br&#10;  end&#10;&#10;  event BrakeCruiseControl2PedalOnly refines BrakeCruiseControl2PedalOnly&#10;    any s&#10;    where&#10;      @grd1 s=CC∧beforecc={PO}&#10;      @grd2 status∈{{CC}}&#10;    then&#10;      @act1 status≔{PO}&#10;      @act2 engrun≔FALSE&#10;      @act3 useraction(s)≔br&#10;  end&#10;&#10;  event BrakeCruiseControl2PedalAssist refines BrakeCruiseControl2PedalAssist&#10;    any s&#10;    where&#10;      @grd1 s=CC∧beforecc={PA}&#10;      @grd2 status∈{{CC}}&#10;    then&#10;      @act1 status≔{PA}&#10;      @act2 engrun≔TRUE&#10;      @act3 useraction(s)≔br&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="M0"/>
+<org.eventb.core.seesContext name="_usxl4DcCEeiHh-RJhgr6eg" org.eventb.core.target="c_status"/>
+<org.eventb.core.seesContext name="_9wutQDcCEeiHh-RJhgr6eg" org.eventb.core.target="c_user_action"/>
+<org.eventb.core.variable name="_usxl5DcCEeiHh-RJhgr6eg" org.eventb.core.identifier="status"/>
+<org.eventb.core.variable name="_usxl5TcCEeiHh-RJhgr6eg" org.eventb.core.identifier="beforecc"/>
+<org.eventb.core.variable name="_usxl5jcCEeiHh-RJhgr6eg" org.eventb.core.identifier="engrun"/>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6eh" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_9wutQTcCEeiHh-RJhgr6eg" org.eventb.core.assignment="status≔{PO}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_9wutQjcCEeiHh-RJhgr6eg" org.eventb.core.assignment="beforecc≔{UNDEFINED}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_9wutQzcCEeiHh-RJhgr6eg" org.eventb.core.assignment="engrun≔FALSE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="_9wutRDcCEeiHh-RJhgr6eg" org.eventb.core.assignment="useraction:∈{{PO↦pc},{PO↦pa},{PO↦cc}}" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6ei" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PedalAssist">
+<org.eventb.core.refinesEvent name="_9wutRTcCEeiHh-RJhgr6eg" org.eventb.core.target="PedalAssist"/>
+<org.eventb.core.guard name="_9wutRjcCEeiHh-RJhgr6eg" org.eventb.core.comment="status∈ℙ(STATUS)∖{{PA},{PC},{BRAKE},{UNDEFINED}}" org.eventb.core.label="grd1" org.eventb.core.predicate="status={PO}∨&#10;            (status={CC}∧beforecc={PA})"/>
+<org.eventb.core.action name="_9wutRzcCEeiHh-RJhgr6eg" org.eventb.core.assignment="status≔{PA}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_9wutSDcCEeiHh-RJhgr6eg" org.eventb.core.assignment="engrun≔TRUE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_9wutSTcCEeiHh-RJhgr6eg" org.eventb.core.assignment="useraction≔{PO↦pa,CC↦ccc}" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6ej" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PedalOnly">
+<org.eventb.core.refinesEvent name="_9wutSjcCEeiHh-RJhgr6eg" org.eventb.core.target="PedalOnly"/>
+<org.eventb.core.guard name="_9wutSzcCEeiHh-RJhgr6eg" org.eventb.core.comment="status∈ℙ(STATUS)∖{{PO},{BRAKE},{UNDEFINED}}" org.eventb.core.label="grd1" org.eventb.core.predicate="status={PA}∨status={PC}∨&#10;            (status={CC}∧beforecc={PO})"/>
+<org.eventb.core.action name="_9wutTDcCEeiHh-RJhgr6eg" org.eventb.core.assignment="status≔{PO}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_9wutTTcCEeiHh-RJhgr6eg" org.eventb.core.assignment="engrun≔FALSE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_9wutTjcCEeiHh-RJhgr6eg" org.eventb.core.assignment="useraction≔{PA↦pac,CC↦ccc,PC↦pcc}" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6ek" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PedalOnly2CruiseControl">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PedalOnly2CruiseControl"/>
+<org.eventb.core.parameter name="_9wutTzcCEeiHh-RJhgr6eg" org.eventb.core.identifier="s"/>
+<org.eventb.core.guard name="_9wutUDcCEeiHh-RJhgr6eg" org.eventb.core.label="grd1" org.eventb.core.predicate="s=PO"/>
+<org.eventb.core.guard name="_9wutUTcCEeiHh-RJhgr6eg" org.eventb.core.label="grd2" org.eventb.core.predicate="status∈{{PO}}"/>
+<org.eventb.core.action name="_9wutUjcCEeiHh-RJhgr6eg" org.eventb.core.assignment="status≔{CC}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_9w4eQDcCEeiHh-RJhgr6eg" org.eventb.core.assignment="beforecc≔{PO}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_9w4eQTcCEeiHh-RJhgr6eg" org.eventb.core.assignment="engrun≔TRUE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="_9w4eQjcCEeiHh-RJhgr6eg" org.eventb.core.assignment="useraction(s)≔cc" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6el" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PedalAssist2CruiseControl">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PedalAssist2CruiseControl"/>
+<org.eventb.core.parameter name="_9w4eQzcCEeiHh-RJhgr6eg" org.eventb.core.identifier="s"/>
+<org.eventb.core.guard name="_9w4eRDcCEeiHh-RJhgr6eg" org.eventb.core.label="grd1" org.eventb.core.predicate="s=PA"/>
+<org.eventb.core.guard name="_9w4eRTcCEeiHh-RJhgr6eg" org.eventb.core.label="grd2" org.eventb.core.predicate="status∈{{PA}}"/>
+<org.eventb.core.action name="_9w4eRjcCEeiHh-RJhgr6eg" org.eventb.core.assignment="status≔{CC}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_9w4eRzcCEeiHh-RJhgr6eg" org.eventb.core.assignment="beforecc≔{PA}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_9w4eSDcCEeiHh-RJhgr6eg" org.eventb.core.assignment="engrun≔TRUE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="_9w4eSTcCEeiHh-RJhgr6eg" org.eventb.core.assignment="useraction(s)≔cc" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6em" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PedalCharge">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PedalCharge"/>
+<org.eventb.core.parameter name="_9w4eSjcCEeiHh-RJhgr6eg" org.eventb.core.identifier="s"/>
+<org.eventb.core.guard name="_9w4eSzcCEeiHh-RJhgr6eg" org.eventb.core.label="grd1" org.eventb.core.predicate="s=PO"/>
+<org.eventb.core.guard name="_9w4eTDcCEeiHh-RJhgr6eg" org.eventb.core.label="grd2" org.eventb.core.predicate="status∈{{PO}}"/>
+<org.eventb.core.action name="_9w4eTTcCEeiHh-RJhgr6eg" org.eventb.core.assignment="status≔{PC}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_9xBoMDcCEeiHh-RJhgr6eg" org.eventb.core.assignment="engrun≔TRUE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_9xBoMTcCEeiHh-RJhgr6eg" org.eventb.core.assignment="useraction(s)≔pc" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6en" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Brake">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Brake"/>
+<org.eventb.core.parameter name="_9xBoMjcCEeiHh-RJhgr6eg" org.eventb.core.identifier="s"/>
+<org.eventb.core.guard name="_9xBoMzcCEeiHh-RJhgr6eg" org.eventb.core.label="grd1" org.eventb.core.predicate="s∈STATUS ∖ {CC, BRAKE, UNDEFINED}"/>
+<org.eventb.core.guard name="_9xBoNDcCEeiHh-RJhgr6eg" org.eventb.core.comment="status∈ℙ(STATUS)∖{{CC},{BRAKE},{UNDEFINED}}" org.eventb.core.label="grd2" org.eventb.core.predicate="status={PO}∨status={PA}∨status={PC}"/>
+<org.eventb.core.action name="_9xBoNTcCEeiHh-RJhgr6eg" org.eventb.core.assignment="status≔{BRAKE}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_9xBoNjcCEeiHh-RJhgr6eg" org.eventb.core.assignment="engrun≔FALSE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_9xBoNzcCEeiHh-RJhgr6eg" org.eventb.core.assignment="useraction(s)≔br" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6eo" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BrakeCruiseControl2PedalOnly">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="BrakeCruiseControl2PedalOnly"/>
+<org.eventb.core.parameter name="_9xBoODcCEeiHh-RJhgr6eg" org.eventb.core.identifier="s"/>
+<org.eventb.core.guard name="_9xBoOTcCEeiHh-RJhgr6eg" org.eventb.core.label="grd1" org.eventb.core.predicate="s=CC∧beforecc={PO}"/>
+<org.eventb.core.guard name="_9xBoOjcCEeiHh-RJhgr6eg" org.eventb.core.label="grd2" org.eventb.core.predicate="status∈{{CC}}"/>
+<org.eventb.core.action name="_9xBoOzcCEeiHh-RJhgr6eg" org.eventb.core.assignment="status≔{PO}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_9xBoPDcCEeiHh-RJhgr6eg" org.eventb.core.assignment="engrun≔FALSE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_9xBoPTcCEeiHh-RJhgr6eg" org.eventb.core.assignment="useraction(s)≔br" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6ep" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BrakeCruiseControl2PedalAssist">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="BrakeCruiseControl2PedalAssist"/>
+<org.eventb.core.parameter name="_9xBoPjcCEeiHh-RJhgr6eg" org.eventb.core.identifier="s"/>
+<org.eventb.core.guard name="_9xBoPzcCEeiHh-RJhgr6eg" org.eventb.core.label="grd1" org.eventb.core.predicate="s=CC∧beforecc={PA}"/>
+<org.eventb.core.guard name="_9xLZMDcCEeiHh-RJhgr6eg" org.eventb.core.label="grd2" org.eventb.core.predicate="status∈{{CC}}"/>
+<org.eventb.core.action name="_9xLZMTcCEeiHh-RJhgr6eg" org.eventb.core.assignment="status≔{PA}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_9xLZMjcCEeiHh-RJhgr6eg" org.eventb.core.assignment="engrun≔TRUE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_9xLZMzcCEeiHh-RJhgr6eg" org.eventb.core.assignment="useraction(s)≔br" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_9xLZNDcCEeiHh-RJhgr6eg" org.eventb.core.identifier="useraction"/>
+<org.eventb.core.invariant name="_9xLZNTcCEeiHh-RJhgr6eg" org.eventb.core.label="inv1" org.eventb.core.predicate="useraction ∈ STATUS ⇸ USER_ACTION"/>
+</org.eventb.core.machineFile>

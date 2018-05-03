@@ -1,0 +1,111 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{M2}
+\MACHINE{M2}{M0}{c\_status}{}
+\VARIABLES{
+	\Variable{status}{}
+	\Variable{beforecc}{}
+	\Variable{engrun}{}
+	\Variable{brkLvr}{}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$brkLvr \in{} BOOL$}{}
+}
+\EVENTS{
+\INITIALISATION{true}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$status\bcmeq{}\{PO\}$}{false}{}
+		\Action{act2}{$beforecc\bcmeq{}\{UNDEFINED\}$}{false}{}
+		\Action{act3}{$engrun\bcmeq{}FALSE$}{false}{}
+		\Action{act4}{$brkLvr \bcmeq{} FALSE$}{true}{}
+	}
+}
+\EVT{PedalOnly}{true}{ordinary}{PedalOnly}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$\\status=\{PA\}\lor{}status=\{PC\}\lor{}\\~           (status=\{CC\}\land{}beforecc=\{PO\})$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PO\}$}{false}{}
+		\Action{act2}{$engrun\bcmeq{}FALSE$}{false}{}
+	}
+}
+\EVT{PedalAssist}{true}{ordinary}{PedalAssist}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$\\status=\{PO\}\lor{}\\~           (status=\{CC\}\land{}beforecc=\{PA\})$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PA\}$}{false}{}
+		\Action{act2}{$engrun\bcmeq{}TRUE$}{false}{}
+	}
+}
+\EVT{PedalOnly2CruiseControl}{true}{ordinary}{PedalOnly2CruiseControl}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$status=\{PO\}$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{CC\}$}{false}{}
+		\Action{act2}{$beforecc\bcmeq{}\{PO\}$}{false}{}
+		\Action{act3}{$engrun\bcmeq{}TRUE$}{false}{}
+	}
+}
+\EVT{PedalAssist2CruiseControl}{true}{ordinary}{PedalAssist2CruiseControl}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$status=\{PA\}$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{CC\}$}{false}{}
+		\Action{act2}{$beforecc\bcmeq{}\{PA\}$}{false}{}
+		\Action{act3}{$engrun\bcmeq{}TRUE$}{false}{}
+	}
+}
+\EVT{PedalCharge}{true}{ordinary}{PedalCharge}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$status=\{PO\}$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PC\}$}{false}{}
+		\Action{act2}{$engrun\bcmeq{}TRUE$}{false}{}
+	}
+}
+\EVT{PressBrkLvr\_1}{true}{ordinary}{Brake}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$status=\{PO\}\lor{}status=\{PA\}\lor{}status=\{PC\}$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{BRAKE\}$}{false}{}
+		\Action{act2}{$engrun\bcmeq{}FALSE$}{false}{}
+		\Action{act3}{$brkLvr \bcmeq{} FALSE$}{true}{}
+	}
+}
+\EVT{PressBrkLvr\_3}{true}{ordinary}{BrakeCruiseControl2PedalOnly}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$status=\{CC\}\land{}beforecc=\{PO\}$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PO\}$}{false}{}
+		\Action{act2}{$engrun\bcmeq{}FALSE$}{false}{}
+		\Action{act3}{$brkLvr \bcmeq{} TRUE$}{true}{}
+	}
+}
+\EVT{PressBrkLvr\_2}{true}{ordinary}{BrakeCruiseControl2PedalAssist}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$status=\{CC\}\land{}beforecc=\{PA\}$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PA\}$}{false}{}
+		\Action{act2}{$engrun\bcmeq{}TRUE$}{false}{}
+		\Action{act3}{$brkLvr \bcmeq{} TRUE$}{true}{}
+	}
+}
+\EVT{StopBrkLvr}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$brkLvr = TRUE$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$brkLvr \bcmeq{} FALSE$}{true}{}
+	}
+}
+}
+\END
+\end{document}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="USER_ACTION" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.poIdentifier name="br" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.poIdentifier name="cc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.poIdentifier name="ccc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.poIdentifier name="pa" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.poIdentifier name="pac" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.poIdentifier name="pc" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.poIdentifier name="pcc" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/eBike5/c_user_action.bpo|org.eventb.core.poFile#c_user_action|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})" org.eventb.core.source="/eBike5/c_user_action.buc|org.eventb.core.contextFile#c_user_action|org.eventb.core.axiom#_rjm1gDcCEeiHh-RJhgr6eg"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

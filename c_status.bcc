@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})" org.eventb.core.source="/eBike5/c_status.buc|org.eventb.core.contextFile#c_status|org.eventb.core.axiom#_pit70zcCEeiHh-RJhgr6eg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="BRAKE" org.eventb.core.source="/eBike5/c_status.buc|org.eventb.core.contextFile#c_status|org.eventb.core.constant#_pit70jcCEeiHh-RJhgr6eg" org.eventb.core.type="STATUS"/>
+<org.eventb.core.scConstant name="CC" org.eventb.core.source="/eBike5/c_status.buc|org.eventb.core.contextFile#c_status|org.eventb.core.constant#_pikK0zcCEeiHh-RJhgr6eg" org.eventb.core.type="STATUS"/>
+<org.eventb.core.scConstant name="PA" org.eventb.core.source="/eBike5/c_status.buc|org.eventb.core.contextFile#c_status|org.eventb.core.constant#_pikK0jcCEeiHh-RJhgr6eg" org.eventb.core.type="STATUS"/>
+<org.eventb.core.scConstant name="PC" org.eventb.core.source="/eBike5/c_status.buc|org.eventb.core.contextFile#c_status|org.eventb.core.constant#_pit70DcCEeiHh-RJhgr6eg" org.eventb.core.type="STATUS"/>
+<org.eventb.core.scConstant name="PO" org.eventb.core.source="/eBike5/c_status.buc|org.eventb.core.contextFile#c_status|org.eventb.core.constant#_pikK0TcCEeiHh-RJhgr6eg" org.eventb.core.type="STATUS"/>
+<org.eventb.core.scCarrierSet name="STATUS" org.eventb.core.source="/eBike5/c_status.buc|org.eventb.core.contextFile#c_status|org.eventb.core.carrierSet#_pikK0DcCEeiHh-RJhgr6eg" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.scConstant name="UNDEFINED" org.eventb.core.source="/eBike5/c_status.buc|org.eventb.core.contextFile#c_status|org.eventb.core.constant#_pit70TcCEeiHh-RJhgr6eg" org.eventb.core.type="STATUS"/>
+</org.eventb.core.scContextFile>

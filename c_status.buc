@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1522734515166" org.eventb.texttools.text_representation="context c_status&#10;&#10;sets STATUS&#10;&#10;constants PO PA CC PC UNDEFINED BRAKE&#10;&#10;axioms&#10;  @axm1 partition(STATUS, {PO}, {PA}, {CC}, {PC},{UNDEFINED},{BRAKE})&#10;end&#10;" version="3">
+<org.eventb.core.carrierSet name="_pikK0DcCEeiHh-RJhgr6eg" org.eventb.core.identifier="STATUS"/>
+<org.eventb.core.constant name="_pikK0TcCEeiHh-RJhgr6eg" org.eventb.core.identifier="PO"/>
+<org.eventb.core.constant name="_pikK0jcCEeiHh-RJhgr6eg" org.eventb.core.identifier="PA"/>
+<org.eventb.core.constant name="_pikK0zcCEeiHh-RJhgr6eg" org.eventb.core.identifier="CC"/>
+<org.eventb.core.constant name="_pit70DcCEeiHh-RJhgr6eg" org.eventb.core.identifier="PC"/>
+<org.eventb.core.constant name="_pit70TcCEeiHh-RJhgr6eg" org.eventb.core.identifier="UNDEFINED"/>
+<org.eventb.core.constant name="_pit70jcCEeiHh-RJhgr6eg" org.eventb.core.identifier="BRAKE"/>
+<org.eventb.core.axiom name="_pit70zcCEeiHh-RJhgr6eg" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(STATUS, {PO}, {PA}, {CC}, {PC},{UNDEFINED},{BRAKE})"/>
+</org.eventb.core.contextFile>

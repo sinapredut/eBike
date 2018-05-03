@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" org.eventb.texttools.text_lastmodified="1522734691125" org.eventb.texttools.text_representation="machine M2 refines M0  sees c_status&#10;&#10;variables status beforecc engrun brkClutchPdl&#10;&#10;invariants&#10;  @inv1 brkClutchPdl ∈ BOOL&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @act4 brkClutchPdl ≔ FALSE&#10;  end&#10;&#10;  event PedalOnly extends PedalOnly&#10;  end&#10;&#10;  event PedalAssist extends PedalAssist&#10;  end&#10;&#10;  event PedalOnly2CruiseControl extends PedalOnly2CruiseControl&#10;  end&#10;&#10;  event PedalAssist2CruiseControl extends PedalAssist2CruiseControl&#10;  end&#10;&#10;  event PedalCharge extends PedalCharge&#10;  end&#10;&#10;  event BrakeClutchPdl_1 extends Brake&#10;    then&#10;      @act3 brkClutchPdl ≔ FALSE&#10;  end&#10;&#10;  event PressBrkClutchPdl_3 extends BrakeCruiseControl2PedalOnly&#10;    then&#10;      @act3 brkClutchPdl ≔ TRUE&#10;  end&#10;&#10;  event PressBrkClutchPdl_2 extends BrakeCruiseControl2PedalAssist&#10;    then&#10;      @act3 brkClutchPdl ≔ TRUE&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="M0"/>
+<org.eventb.core.seesContext name="_usxl4DcCEeiHh-RJhgr6eg" org.eventb.core.target="c_status"/>
+<org.eventb.core.variable name="_usxl5DcCEeiHh-RJhgr6eg" org.eventb.core.identifier="status"/>
+<org.eventb.core.variable name="_usxl5TcCEeiHh-RJhgr6eg" org.eventb.core.identifier="beforecc"/>
+<org.eventb.core.variable name="_usxl5jcCEeiHh-RJhgr6eg" org.eventb.core.identifier="engrun"/>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6eh" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_DwpBQDcDEeiHh-RJhgr6eg" org.eventb.core.assignment="brkLvr ≔ FALSE" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6ei" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PedalOnly">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PedalOnly"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6ej" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PedalAssist">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PedalAssist"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6ek" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PedalOnly2CruiseControl">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PedalOnly2CruiseControl"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6el" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PedalAssist2CruiseControl">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PedalAssist2CruiseControl"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6em" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PedalCharge">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PedalCharge"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6en" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PressBrkLvr_1">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Brake"/>
+<org.eventb.core.action name="_DwpBQTcDEeiHh-RJhgr6eg" org.eventb.core.assignment="brkLvr ≔ TRUE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6eo" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PressBrkLvr_3">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="BrakeCruiseControl2PedalOnly"/>
+<org.eventb.core.action name="_DwpBQjcDEeiHh-RJhgr6eg" org.eventb.core.assignment="brkLvr ≔ TRUE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6ep" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PressBrkLvr_2">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="BrakeCruiseControl2PedalAssist"/>
+<org.eventb.core.action name="_DwyyQDcDEeiHh-RJhgr6eg" org.eventb.core.assignment="brkLvr ≔ TRUE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_DwyyQTcDEeiHh-RJhgr6eg" org.eventb.core.identifier="brkLvr"/>
+<org.eventb.core.invariant name="_DwyyQjcDEeiHh-RJhgr6eg" org.eventb.core.label="inv1" org.eventb.core.predicate="brkLvr ∈ BOOL"/>
+<org.eventb.core.event name="_usxl5jcCEeiHh-RJhgr6eq" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="StopBrkLvr">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="brkLvr = TRUE"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="brkLvr ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

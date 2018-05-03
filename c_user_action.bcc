@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(USER_ACTION,{pa},{pac},{cc},{pc},{pcc},{br},{ccc})" org.eventb.core.source="/eBike5/c_user_action.buc|org.eventb.core.contextFile#c_user_action|org.eventb.core.axiom#_rjm1gDcCEeiHh-RJhgr6eg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="USER_ACTION" org.eventb.core.source="/eBike5/c_user_action.buc|org.eventb.core.contextFile#c_user_action|org.eventb.core.carrierSet#_rjdrkDcCEeiHh-RJhgr6eg" org.eventb.core.type="ℙ(USER_ACTION)"/>
+<org.eventb.core.scConstant name="br" org.eventb.core.source="/eBike5/c_user_action.buc|org.eventb.core.contextFile#c_user_action|org.eventb.core.constant#_rjdrljcCEeiHh-RJhgr6eg" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.scConstant name="cc" org.eventb.core.source="/eBike5/c_user_action.buc|org.eventb.core.contextFile#c_user_action|org.eventb.core.constant#_rjdrkzcCEeiHh-RJhgr6eg" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.scConstant name="ccc" org.eventb.core.source="/eBike5/c_user_action.buc|org.eventb.core.contextFile#c_user_action|org.eventb.core.constant#_rjdrlzcCEeiHh-RJhgr6eg" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.scConstant name="pa" org.eventb.core.source="/eBike5/c_user_action.buc|org.eventb.core.contextFile#c_user_action|org.eventb.core.constant#_rjdrkTcCEeiHh-RJhgr6eg" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.scConstant name="pac" org.eventb.core.source="/eBike5/c_user_action.buc|org.eventb.core.contextFile#c_user_action|org.eventb.core.constant#_rjdrkjcCEeiHh-RJhgr6eg" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.scConstant name="pc" org.eventb.core.source="/eBike5/c_user_action.buc|org.eventb.core.contextFile#c_user_action|org.eventb.core.constant#_rjdrlDcCEeiHh-RJhgr6eg" org.eventb.core.type="USER_ACTION"/>
+<org.eventb.core.scConstant name="pcc" org.eventb.core.source="/eBike5/c_user_action.buc|org.eventb.core.contextFile#c_user_action|org.eventb.core.constant#_rjdrlTcCEeiHh-RJhgr6eg" org.eventb.core.type="USER_ACTION"/>
+</org.eventb.core.scContextFile>

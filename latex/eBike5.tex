@@ -1,0 +1,264 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\MultiTitle{eBike5}
+\MultiHeader{CONTEXT}{c\_status}
+\CONTEXT{c\_status}{}{}
+\SETS{
+	\Set{STATUS}{}
+}
+\CONSTANTS{
+	\Constant{PO}{}
+	\Constant{PA}{}
+	\Constant{CC}{}
+	\Constant{PC}{}
+	\Constant{UNDEFINED}{}
+	\Constant{BRAKE}{}
+}
+\AXIOMS{
+	\Axiom{axm1}{false}{$partition(STATUS, \{PO\}, \{PA\}, \{CC\}, \{PC\},\{UNDEFINED\},\{BRAKE\})$}{}
+}
+\END
+\MultiHeader{CONTEXT}{c\_user\_action}
+\CONTEXT{c\_user\_action}{}{}
+\SETS{
+	\Set{USER\_ACTION}{}
+}
+\CONSTANTS{
+	\Constant{pa}{}
+	\Constant{pac}{}
+	\Constant{cc}{}
+	\Constant{pc}{}
+	\Constant{pcc}{}
+	\Constant{br}{}
+	\Constant{ccc}{}
+}
+\AXIOMS{
+	\Axiom{axm1}{false}{$partition(USER\_ACTION, \{pa\}, \{pac\}, \{cc\}, \{pc\}, \{pcc\}, \{br\}, \{ccc\})$}{}
+}
+\END
+\MultiHeader{MACHINE}{M0}
+\MACHINE{M0}{}{c\_status}{}
+\VARIABLES{
+	\Variable{status}{}
+	\Variable{beforecc}{}
+	\Variable{engrun}{}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$status\subseteq{}STATUS$}{}
+	\Invariant{inv3}{false}{$beforecc\subseteq{}\{PO,PA,UNDEFINED\}$}{}
+	\Invariant{inv4}{false}{$engrun\in{}BOOL$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$status\bcmeq{}\{PO\}$}{true}{}
+		\Action{act2}{$beforecc\bcmeq{}\{UNDEFINED\}$}{true}{}
+		\Action{act3}{$engrun\bcmeq{}FALSE$}{true}{}
+	}
+}
+\EVT{PedalOnly}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$\\status=\{PA\}\lor{}status=\{PC\}\lor{}\\~           (status=\{CC\}\land{}beforecc=\{PO\})$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PO\}$}{true}{}
+		\Action{act2}{$engrun\bcmeq{}FALSE$}{true}{}
+	}
+}
+\EVT{PedalAssist}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$\\status=\{PO\}\lor{}\\~           (status=\{CC\}\land{}beforecc=\{PA\})$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PA\}$}{true}{}
+		\Action{act2}{$engrun\bcmeq{}TRUE$}{true}{}
+	}
+}
+\EVT{PedalOnly2CruiseControl}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$status=\{PO\}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{CC\}$}{true}{}
+		\Action{act2}{$beforecc\bcmeq{}\{PO\}$}{true}{}
+		\Action{act3}{$engrun\bcmeq{}TRUE$}{true}{}
+	}
+}
+\EVT{PedalAssist2CruiseControl}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$status=\{PA\}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{CC\}$}{true}{}
+		\Action{act2}{$beforecc\bcmeq{}\{PA\}$}{true}{}
+		\Action{act3}{$engrun\bcmeq{}TRUE$}{true}{}
+	}
+}
+\EVT{PedalCharge}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$status=\{PO\}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PC\}$}{true}{}
+		\Action{act2}{$engrun\bcmeq{}TRUE$}{true}{}
+	}
+}
+\EVT{Brake}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$status=\{PO\}\lor{}status=\{PA\}\lor{}status=\{PC\}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{BRAKE\}$}{true}{}
+		\Action{act2}{$engrun\bcmeq{}FALSE$}{true}{}
+	}
+}
+\EVT{BrakeCruiseControl2PedalOnly}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$status=\{CC\}\land{}beforecc=\{PO\}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PO\}$}{true}{}
+		\Action{act2}{$engrun\bcmeq{}FALSE$}{true}{}
+	}
+}
+\EVT{BrakeCruiseControl2PedalAssist}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$status=\{CC\}\land{}beforecc=\{PA\}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PA\}$}{true}{}
+		\Action{act2}{$engrun\bcmeq{}TRUE$}{true}{}
+	}
+}
+}
+\END
+\MultiHeader{MACHINE}{M1}
+\MACHINE{M1}{M0}{c\_status,c\_user\_action}{}
+\VARIABLES{
+	\Variable{status}{}
+	\Variable{beforecc}{}
+	\Variable{engrun}{}
+	\Variable{useraction}{}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$useraction \in{} STATUS \pfun{} USER\_ACTION$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$status\bcmeq{}\{PO\}$}{true}{}
+		\Action{act2}{$beforecc\bcmeq{}\{UNDEFINED\}$}{true}{}
+		\Action{act3}{$engrun\bcmeq{}FALSE$}{true}{}
+		\Action{act4}{$useraction\bcmin{}\{\{PO\mapsto{}pc\},\{PO\mapsto{}pa\},\{PO\mapsto{}cc\}\}$}{true}{}
+	}
+}
+\EVT{PedalAssist}{false}{ordinary}{PedalAssist}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$\\status=\{PO\}\lor{}\\~           (status=\{CC\}\land{}beforecc=\{PA\})$}{true}{\\status$\in{}$$\pow{}$(STATUS)$\setminus{}$$\{$$\{$PA$\}$,$\{$PC$\}$,$\{$BRAKE$\}$,$\{$UNDEFINED$\}$$\}$}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PA\}$}{true}{}
+		\Action{act2}{$engrun\bcmeq{}TRUE$}{true}{}
+		\Action{act3}{$useraction\bcmeq{}\{PO\mapsto{}pa,CC\mapsto{}ccc\}$}{true}{}
+	}
+}
+\EVT{PedalOnly}{false}{ordinary}{PedalOnly}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$\\status=\{PA\}\lor{}status=\{PC\}\lor{}\\~           (status=\{CC\}\land{}beforecc=\{PO\})$}{true}{\\status$\in{}$$\pow{}$(STATUS)$\setminus{}$$\{$$\{$PO$\}$,$\{$BRAKE$\}$,$\{$UNDEFINED$\}$$\}$}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PO\}$}{true}{}
+		\Action{act2}{$engrun\bcmeq{}FALSE$}{true}{}
+		\Action{act3}{$useraction\bcmeq{}\{PA\mapsto{}pac,CC\mapsto{}ccc,PC\mapsto{}pcc\}$}{true}{}
+	}
+}
+\EVT{PedalOnly2CruiseControl}{false}{ordinary}{PedalOnly2CruiseControl}{}{
+	\ANY{
+		\Param{s}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$s=PO$}{true}{}
+		\Guard{grd2}{false}{$status\in{}\{\{PO\}\}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{CC\}$}{true}{}
+		\Action{act2}{$beforecc\bcmeq{}\{PO\}$}{true}{}
+		\Action{act3}{$engrun\bcmeq{}TRUE$}{true}{}
+		\Action{act4}{$useraction(s)\bcmeq{}cc$}{true}{}
+	}
+}
+\EVT{PedalAssist2CruiseControl}{false}{ordinary}{PedalAssist2CruiseControl}{}{
+	\ANY{
+		\Param{s}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$s=PA$}{true}{}
+		\Guard{grd2}{false}{$status\in{}\{\{PA\}\}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{CC\}$}{true}{}
+		\Action{act2}{$beforecc\bcmeq{}\{PA\}$}{true}{}
+		\Action{act3}{$engrun\bcmeq{}TRUE$}{true}{}
+		\Action{act4}{$useraction(s)\bcmeq{}cc$}{true}{}
+	}
+}
+\EVT{PedalCharge}{false}{ordinary}{PedalCharge}{}{
+	\ANY{
+		\Param{s}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$s=PO$}{true}{}
+		\Guard{grd2}{false}{$status\in{}\{\{PO\}\}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PC\}$}{true}{}
+		\Action{act2}{$engrun\bcmeq{}TRUE$}{true}{}
+		\Action{act3}{$useraction(s)\bcmeq{}pc$}{true}{}
+	}
+}
+\EVT{Brake}{false}{ordinary}{Brake}{}{
+	\ANY{
+		\Param{s}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$s\in{}STATUS \setminus{} \{CC, BRAKE, UNDEFINED\}$}{true}{}
+		\Guard{grd2}{false}{$status=\{PO\}\lor{}status=\{PA\}\lor{}status=\{PC\}$}{true}{\\status$\in{}$$\pow{}$(STATUS)$\setminus{}$$\{$$\{$CC$\}$,$\{$BRAKE$\}$,$\{$UNDEFINED$\}$$\}$}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{BRAKE\}$}{true}{}
+		\Action{act2}{$engrun\bcmeq{}FALSE$}{true}{}
+		\Action{act3}{$useraction(s)\bcmeq{}br$}{true}{}
+	}
+}
+\EVT{BrakeCruiseControl2PedalOnly}{false}{ordinary}{BrakeCruiseControl2PedalOnly}{}{
+	\ANY{
+		\Param{s}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$s=CC\land{}beforecc=\{PO\}$}{true}{}
+		\Guard{grd2}{false}{$status\in{}\{\{CC\}\}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PO\}$}{true}{}
+		\Action{act2}{$engrun\bcmeq{}FALSE$}{true}{}
+		\Action{act3}{$useraction(s)\bcmeq{}br$}{true}{}
+	}
+}
+\EVT{BrakeCruiseControl2PedalAssist}{false}{ordinary}{BrakeCruiseControl2PedalAssist}{}{
+	\ANY{
+		\Param{s}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$s=CC\land{}beforecc=\{PA\}$}{true}{}
+		\Guard{grd2}{false}{$status\in{}\{\{CC\}\}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$status\bcmeq{}\{PA\}$}{true}{}
+		\Action{act2}{$engrun\bcmeq{}TRUE$}{true}{}
+		\Action{act3}{$useraction(s)\bcmeq{}br$}{true}{}
+	}
+}
+}
+\END
+\end{document}

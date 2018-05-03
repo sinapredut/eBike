@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.poIdentifier name="BRAKE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="CC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="PA" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="PC" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="PO" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="UNDEFINED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poPredicate name="UNDEFINEE" org.eventb.core.predicate="partition(STATUS,{PO},{PA},{CC},{PC},{UNDEFINED},{BRAKE})" org.eventb.core.source="/eBike5/c_status.buc|org.eventb.core.contextFile#c_status|org.eventb.core.axiom#_pit70zcCEeiHh-RJhgr6eg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="beforecc" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.poIdentifier name="engrun" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="status" org.eventb.core.type="ℙ(STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTALLHYPc_statuw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{UNDEFINED}⊆{PO,PA,UNDEFINED}" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_usxl6DcCEeiHh-RJhgr6eg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_usxl6DcCEeiHh-RJhgr6eg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_statuw" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="beforecc'" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.poIdentifier name="engrun'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="status'" org.eventb.core.type="ℙ(STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_statuw" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTc_statuw" org.eventb.core.poStamp="2"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_statux" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="engrun'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="status'" org.eventb.core.type="ℙ(STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_statux" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTc_statux" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="status={PA}∨status={PC}∨(status={CC}∧beforecc={PO})" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_usxl6jcCEeiHh-RJhgr6eg|org.eventb.core.guard#_usxl6zcCEeiHh-RJhgr6eg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_statuy" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="engrun'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="status'" org.eventb.core.type="ℙ(STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_statuy" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTc_statuy" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="status={PO}∨(status={CC}∧beforecc={PA})" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_usxl7jcCEeiHh-RJhgr6eg|org.eventb.core.guard#_usxl7zcCEeiHh-RJhgr6eg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PedalOnly2CruiseControl/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTALLHYPc_statuz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{PO}⊆{PO,PA,UNDEFINED}" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_usxl6DcCEeiHh-RJhgr6eg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_us7W4DcCEeiHh-RJhgr6eg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_usxl6DcCEeiHh-RJhgr6eg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poSequent#PedalOnly2CruiseControl\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_statuz" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="beforecc'" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.poIdentifier name="engrun'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="status'" org.eventb.core.type="ℙ(STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_statuz" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTc_statuz" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="status={PO}" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_us7W4DcCEeiHh-RJhgr6eg|org.eventb.core.guard#_us7W4TcCEeiHh-RJhgr6eg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PedalAssist2CruiseControl/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTALLHYPc_statu{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{PA}⊆{PO,PA,UNDEFINED}" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_usxl6DcCEeiHh-RJhgr6eg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_us7W5TcCEeiHh-RJhgr6eg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_usxl6DcCEeiHh-RJhgr6eg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poSequent#PedalAssist2CruiseControl\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_statu{" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="beforecc'" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.poIdentifier name="engrun'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="status'" org.eventb.core.type="ℙ(STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_statu{" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTc_statu{" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="status={PA}" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_us7W5TcCEeiHh-RJhgr6eg|org.eventb.core.guard#_us7W5jcCEeiHh-RJhgr6eg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_statu|" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="engrun'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="status'" org.eventb.core.type="ℙ(STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_statu|" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTc_statu\|" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="status={PO}" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_utEg0DcCEeiHh-RJhgr6eg|org.eventb.core.guard#_utEg0TcCEeiHh-RJhgr6eg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_statu}" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="engrun'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="status'" org.eventb.core.type="ℙ(STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_statu}" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTc_statu}" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="status={PO}∨status={PA}∨status={PC}" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_utEg1DcCEeiHh-RJhgr6eg|org.eventb.core.guard#_utEg1TcCEeiHh-RJhgr6eg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_statu~" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="engrun'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="status'" org.eventb.core.type="ℙ(STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_statu~" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTc_statu~" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="status={CC}∧beforecc={PO}" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_utEg2DcCEeiHh-RJhgr6eg|org.eventb.core.guard#_utEg2TcCEeiHh-RJhgr6eg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_statv'" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="engrun'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="status'" org.eventb.core.type="ℙ(STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_statv'" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTc_statv'" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="status={CC}∧beforecc={PA}" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_utEg3DcCEeiHh-RJhgr6eg|org.eventb.core.guard#_utEg3TcCEeiHh-RJhgr6eg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/eBike5/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="status⊆STATUS" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_usxl5zcCEeiHh-RJhgr6eg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="beforecc⊆{PO,PA,UNDEFINED}" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_usxl6DcCEeiHh-RJhgr6eg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="engrun∈BOOL" org.eventb.core.source="/eBike5/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_usxl6TcCEeiHh-RJhgr6eg"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
